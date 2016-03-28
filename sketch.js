@@ -86,7 +86,7 @@ function draw(){
   background(0,100,119);
   textSize(24);
   text("Amount of damage: "+ numCloudsCollected, 30,30);
-  if (survived){
+  while (survived){
      text("you ok", 30,70);
   }
   else if(!survived){
