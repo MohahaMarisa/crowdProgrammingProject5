@@ -42,7 +42,7 @@ function FatClouds(myCloudImg){
             this.isOffScreen = true;//cloud should disappear
             isItFluffy = true;//the sheep should gian fluff
             numCloudsCollected++;
-            sheepMass+=int(numCloudsCollected/3); //mass of sheep increases the more
+            sheepMass+=int(numCloudsCollected/2); //mass of sheep increases the more
             //cloud fluff it has
             bop.play();
         }
