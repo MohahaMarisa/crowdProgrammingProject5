@@ -86,8 +86,7 @@ function setup() {
 function draw(){
   background(0,100,119);
   textSize(24);
-  text("Amount of damage: "+ numCloudsCollected, 30,30);
-  text("how long you've played for"+howLongDidTheySurvive,80,30);
+  text("Amount of damage: "+ numCloudsCollected + "How long you've played: ", 30,30);
   // if (didTheyStart){
   //   howLongDidTheySurvive = second();
   // }
