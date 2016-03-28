@@ -87,7 +87,7 @@ function draw(){
   textSize(24);
   text("Amount of damage: "+ numCloudsCollected, 30,30);
   do{
-    text("you died", 30,70);
+    text("Status: (if game freezes, it's because you died)", 30,70);
   }
   while (!survived);
 
