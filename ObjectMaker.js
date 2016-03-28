@@ -20,7 +20,7 @@ function FatClouds(myCloudImg){
     // print(this.proportion);
     this.x = random(0,width);
     this.y = - (this.size);
-    this.speed = random(1,15);
+    this.speed = random(1,10);
     this.cloudImg = myCloudImg;
     this.isOffScreen = false; //this boolean is used to determine whether or not
     //something should be removed from the screen and therefore from the
