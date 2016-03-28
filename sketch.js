@@ -4,7 +4,7 @@
 //these are all the variables dealing with creating the force vector that appears
 //when the user clicks and drags their mouse
 var howLongDidTheySurvive;
-var didTheyLose;
+var didTheyLose=false;
 var forceBegin;
 var mouseXForceVector;
 var mouseYForceVector;
