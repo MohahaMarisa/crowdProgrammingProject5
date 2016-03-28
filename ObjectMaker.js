@@ -20,7 +20,7 @@ function FatClouds(myCloudImg){
     // print(this.proportion);
     this.x = random(0,width);
     this.y = - (this.size);
-    this.speed = random(4,25);
+    this.speed = random(1,15);
     this.cloudImg = myCloudImg;
     this.isOffScreen = false; //this boolean is used to determine whether or not
     //something should be removed from the screen and therefore from the
@@ -42,7 +42,7 @@ function FatClouds(myCloudImg){
             this.isOffScreen = true;//cloud should disappear
             isItFluffy = true;//the sheep should gian fluff
             numCloudsCollected++;
-            sheepMass+=int(numCloudsCollected/2); //mass of sheep increases the more
+            sheepMass+=int(numCloudsCollected/1.5); //mass of sheep increases the more
             //cloud fluff it has
             bop.play();
         }
