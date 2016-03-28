@@ -85,7 +85,7 @@ function draw(){
   background(0,100,119);
   textSize(24);
   text("Amount of damage: "+ numCloudsCollected, 30,30);
-  if (didTheyLose=true){
+  while(didTheyLose){
     text("GAME LOST", 30, 60);
   }
   noStroke();
