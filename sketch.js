@@ -86,8 +86,11 @@ function draw(){
   background(0,100,119);
   textSize(24);
   text("Amount of damage: "+ numCloudsCollected, 30,30);
-  if (lostYet){
-     text("ya died", 30,70);
+  if (!lostYet){
+     text("you ok", 30,70);
+  }
+  else if(lostYet){
+    text("you died", 30,70);
   }
   noStroke();
     for(var i=0; i<100; i++){
