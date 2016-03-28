@@ -83,7 +83,7 @@ function setup() {
 function draw(){
   background(0,100,119);
   textSize(24);
-  text("Amount of Fluffy Cloud Wool: "+ numCloudsCollected, 30,30);
+  text("Amount of damage: "+ numCloudsCollected, 30,30);
   noStroke();
     for(var i=0; i<100; i++){
     fill(237,241,210, i/100*255);
