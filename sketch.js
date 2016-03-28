@@ -86,12 +86,11 @@ function draw(){
   background(0,100,119);
   textSize(24);
   text("Amount of damage: "+ numCloudsCollected, 30,30);
-  while (survived){
-     text("you ok", 30,70);
-  }
-  else if(!survived){
+  do{
     text("you died", 30,70);
   }
+  while (!survived);
+
   noStroke();
     for(var i=0; i<100; i++){
     fill(237,241,210, i/100*255);
