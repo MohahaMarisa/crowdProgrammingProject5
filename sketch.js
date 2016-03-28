@@ -3,7 +3,7 @@
 // graphic representation of PHYSICS:
 //these are all the variables dealing with creating the force vector that appears
 //when the user clicks and drags their mouse
-var howLongDidTheySurvive = second();
+var howLongDidTheySurvive;
 var didTheyStart;
 var didTheyLose=false;
 var forceBegin;
@@ -86,7 +86,8 @@ function setup() {
 function draw(){
   background(0,100,119);
   textSize(24);
-  text("Amount of damage: "+ numCloudsCollected + "How long you've played: ", 30,30);
+  text("Amount of damage: "+ numCloudsCollected, 30,30);
+  text("how long you've played for"+howLongDidTheySurvive,80,30);
   // if (didTheyStart){
   //   howLongDidTheySurvive = second();
   // }
