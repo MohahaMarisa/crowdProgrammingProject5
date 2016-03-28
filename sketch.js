@@ -163,14 +163,14 @@ function mouseReleased(){
 }
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
-    UglySheep.x+=30;
+    nakedSheep.x+=30;
   } else if (keyCode === RIGHT_ARROW) {
-    UglySheep.x-=30;
+    nakedSheep.x-=30;
   }
     else if (keyCode === UP_ARROW) {
-    UglySheep.y-=30;
+    nakedSheep.y-=30;
   } else if (keyCode === DOWN_ARROW) {
-    UglySheep.y+=30;
+    nakedSheep.y+=30;
   }
 }
 function UglySheep(){
