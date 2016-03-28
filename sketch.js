@@ -4,7 +4,6 @@
 //these are all the variables dealing with creating the force vector that appears
 //when the user clicks and drags their mouse
 var howLongDidTheySurvive;
-var didTheyLose;
 var forceBegin;
 var mouseXForceVector;
 var mouseYForceVector;
@@ -84,10 +83,7 @@ function setup() {
 function draw(){
   background(0,100,119);
   textSize(24);
-  text("Amount of damage: "+ numCloudsCollected, 30,30);
-  if (didTheyLose=true){
-    text("GAME LOST", 30, 60);
-  }
+  text("Amount of Fluffy Cloud Wool: "+ numCloudsCollected, 30,30);
   noStroke();
     for(var i=0; i<100; i++){
     fill(237,241,210, i/100*255);
@@ -167,14 +163,14 @@ function mouseReleased(){
 }
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
-    nakedSheep.x+=30;
+    UglySheep.x+=30;
   } else if (keyCode === RIGHT_ARROW) {
-    nakedSheep.x-=30;
+    UglySheep.x-=30;
   }
     else if (keyCode === UP_ARROW) {
-    nakedSheep.y-=30;
+    UglySheep.y-=30;
   } else if (keyCode === DOWN_ARROW) {
-    nakedSheep.y+=30;
+    UglySheep.y+=30;
   }
 }
 function UglySheep(){
@@ -218,7 +214,6 @@ function UglySheep(){
             isItFluffy = false;
             numCloudsCollected = 0;
             sheepMass = 15;
-            didTheyLose = true;
 
             //initial position
             this.x = width/2;
@@ -235,53 +230,3 @@ function UglySheep(){
         this.woolSize*=numCloudsCollected;//sheep gets more wool with every cloud
     }
 }
-
-// /**
-//  *  
-//  *  gup(name) :: retrieves URL parameters if provided
-//  *
-//  *  Prepares the page for MTurk on load.
-//  *  1. looks for a form element with id="mturk_form", and sets its METHOD / ACTION
-//  *    1a. All that the task page needs to do is submit the form element when ready
-//  *  2. disables form elements if HIT hasn't been accepted
-//  *
-//  **/
-
-// // selector used by jquery to identify your form
-// var form_selector = "#mturk_form";
-
-// // function for getting URL parameters
-// function gup(name) {
-//   name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-//   var regexS = "[\\?&]"+name+"=([^&#]*)";
-//   var regex = new RegExp(regexS);
-//   var results = regex.exec(window.location.href);
-//   if(results == null)
-//     return "";
-//   else return unescape(results[1]);
-// }
-
-// //  Turkify the captioning page.
-// $(document).ready(function () {
-//   // is assigntmentId is a URL parameter
-//   if((aid = gup("assignmentId"))!="" && $(form_selector).length>0) {
-
-//     // If the HIT hasn't been accepted yet, disabled the form fields.
-//     if(aid == "ASSIGNMENT_ID_NOT_AVAILABLE") {
-//       $('input,textarea,select').attr("DISABLED", "disabled");
-//     }
-
-//     // Add a new hidden input element with name="assignmentId" that
-//     // with assignmentId as its value.
-//     var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
-//     var aid_input = $("<input type='hidden' name='timeLived' value='" + foooklation of alltime variableforhowlongtheylivedinmycode+ "'>").appendTo($(form_selector));
-
-//     // Make sure the submit form's method is POST
-//     $(form_selector).attr('method', 'POST');
-
-//     // Set the Action of the form to the provided "turkSubmitTo" field
-//     if((submit_url=gup("turkSubmitTo"))!="") {
-//       $(form_selector).attr('action', submit_url + '/mturk/externalSubmit');
-//     }
-//   }
-// });
