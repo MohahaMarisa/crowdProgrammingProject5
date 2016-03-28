@@ -3,7 +3,7 @@
 // graphic representation of PHYSICS:
 //these are all the variables dealing with creating the force vector that appears
 //when the user clicks and drags their mouse
-var howLongDidTheySurvive;
+var howLongDidTheySurvive = second();
 var didTheyStart;
 var didTheyLose=false;
 var forceBegin;
@@ -73,7 +73,6 @@ function setup() {
     sheepMass = 15;
     forceBegin = new ForcePoint();
     nakedSheep = new UglySheep();
-    didTheyStart = false;
 
     //initialize random clouds and put in array
     for(var i = 0; i < numOfClouds; i++){
@@ -87,10 +86,6 @@ function draw(){
   background(0,100,119);
   textSize(24);
   text("Amount of damage: "+ numCloudsCollected, 30,30);
-  text("how long you've played for"+howLongDidTheySurvive,80,30);
-  // if (didTheyStart){
-  //   howLongDidTheySurvive = second();
-  // }
   while(didTheyLose){
     text("GAME LOST", 30, 60);
   }
