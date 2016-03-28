@@ -15,12 +15,12 @@ function ForcePoint(){
 }
 function FatClouds(myCloudImg){
 
-    this.size = random(50,300);
+    this.size = random(200,400);
     this.proportion = randomGaussian(68,3)/100;
     // print(this.proportion);
     this.x = random(0,width);
     this.y = - (this.size);
-    this.speed = random(1,10);
+    this.speed = random(4,25);
     this.cloudImg = myCloudImg;
     this.isOffScreen = false; //this boolean is used to determine whether or not
     //something should be removed from the screen and therefore from the
